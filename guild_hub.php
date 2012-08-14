@@ -143,6 +143,7 @@ class guild_hub
                     "name" => "avatar", 
                     "label" => "Your Avatar (2mb limit)"
                     "showreg" => 0
+                    
                 );
                 
             );
