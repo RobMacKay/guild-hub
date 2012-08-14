@@ -29,7 +29,7 @@ class guild_hub
             global $wpdb;
         
             $sqls[] = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}gh_settings (
-                        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                         setting TEXT NOT NULL ,
                         data TEXT NOT NULL
                         );";
@@ -43,11 +43,7 @@ class guild_hub
                         user_id,
                         guild_id
                         )
-                    );
-            ";
-            
-            CREATE TABLE `gh_table` (
-
+                    );";
             
             foreach($sqls as $sql) {
             
@@ -67,14 +63,14 @@ class guild_hub
                 "age" => array(
                     "type" => "text",
                     "name" => "gh_age",
-                    "label" => "Your Age"
+                    "label" => "Your Age",
                     "showreg" => 1                    
                 ),
                 
                 "experiance" => array(
                     "type" => "textarea",
                     "name" => "gh_exp",
-                    "label" => "MMO Experiance"
+                    "label" => "MMO Experiance",
                     "showreg" => 0                    
                 ),
                 
@@ -82,23 +78,23 @@ class guild_hub
                     "type" => "select",
                     "name" => "gh_pvp",
                     "value" => array("Casual", "Hardcore", "For Fun", "Serious Team"),
-                    "label" => "PVE Preference"
+                    "label" => "PVE Preference",
                     "showreg" => 0
-                );                      
+                ),                      
                 
                 "pve_pref" => array(
                     "type" => "select",
                     "name" => "gh_pve",
                     "value" => array("Casual", "Hardcore", "For Fun", "Serious Team"),
-                    "label" => "PVP Preference"
+                    "label" => "PVP Preference",
                     "showreg" => 0
-                );                
+                ),                
                 
                 "looking" => array(
                     "type" => "checkbox",
                     "name" => "gh_looking",
                     "value" => "1",
-                    "label" => "Looking For Guild?"  
+                    "label" => "Looking For Guild?",
                     "showreg" => 1                    
                 ),
                 
@@ -106,45 +102,45 @@ class guild_hub
                     "type" => "select",
                     "name" => "gh_location",
                     "value" => array("N.America", "S.America", "Europe", "Asia", "Australisia", "Russia"),
-                    "label" => "My Location"
+                    "label" => "My Location",
                     "showreg" => 1
-                );
+                ),
                 
                 "server" => array(
                     "type" => "text",
                     "name" => "gh_home",
-                    "label" => "Your Home Server Name"
+                    "label" => "Your Home Server Name",
                     "showreg" => 0
-                );
+                ),
                 
                 "games" => array(
                     "type" => "textarea",
                     "name" => "gh_games",
-                    "label" => "What games have you played?"
+                    "label" => "What games have you played?",
                     "showreg" => 0
-                );
+                ),
                 
                 "pve_experiance" => array(
                     "type" => "textarea",
                     "name" => "gh_pve_exp",
-                    "label" => "A little about your PVE experiance"
+                    "label" => "A little about your PVE experiance",
                     "showreg" => 0
-                );                
+                ),            
                 
                 "pvp_experiance" => array(
                     "type" => "textarea",
                     "name" => "gh_pvp_exp",
-                    "label" => "A little about your PVP experiance"
+                    "label" => "A little about your PVP experiance",
                     "showreg" => 0
-                );
+                ),
                 
                 "avatar" => array(
                     "type" => "file",
                     "name" => "avatar", 
-                    "label" => "Your Avatar (2mb limit)"
+                    "label" => "Your Avatar (2mb limit)",
                     "showreg" => 0
                     
-                );
+                )
                 
             );
             
@@ -206,7 +202,8 @@ class guild_hub
     
     }
     
-    private function user_fields() {
+    private function user_fields() 
+    {
     
         global $wpdb, $user_ID;
         
@@ -319,6 +316,8 @@ EOT;
     
     /*
     
+    @TODO
+
     Things we need: 
     
     User registration & Guild registration - 1 guild per user. 
